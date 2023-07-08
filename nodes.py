@@ -1,0 +1,55 @@
+#!/usr/bin/python3
+from dataclasses import dataclass
+
+@dataclass
+class NumberNode:
+    value: float
+
+    def __repr__(self):
+        return f"{self.value}"
+    
+@dataclass
+class AddNode:
+    node_a: any
+    node_b: any
+
+    def __repr__(self):
+        return f"({self.node_a} + {self.node_b})"
+    
+@dataclass
+class SubNode:
+    node_a: any
+    node_b: any
+
+    def __repr__(self):
+        return f"({self.node_a} - {self.node_b})"
+    
+@dataclass
+class MultiplyNode:
+    node_a: any
+    node_b: any
+
+    def __repr__(self):
+        return f"({self.node_a} * {self.node_b})"
+    
+@dataclass
+class DivideNode:
+    node_a: any
+    node_b: any
+
+    def __repr__(self):
+        return f"({self.node_a} / {self.node_b})"
+
+@dataclass
+class PlusNode:
+    value: any
+
+    def __repr__(self):
+        return f"(+{self.value})"
+
+@dataclass
+class MinusNode:
+    value: any
+
+    def __repr__(self):
+        return f"(-{self.value})"
